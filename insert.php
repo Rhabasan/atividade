@@ -8,19 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $comando->execute([':nome' => $_POST['nome']]);
     header('Location:index.php');
 }
-?>
-<!DOCTYPE html>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
-<main class="container">
+$_title = 'Novo Gênero'; 
+
+?>
+
+<?php include('./includes/header.php') ?>
+
         <h1>Novo Gênero</h1>
         <form action="insert.php" method= post>
             <div class="form-group">
@@ -32,6 +26,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             <button class="btn btn-success" type="submit">Salvar</button>
         </form>
 
-    </main>
-</body>
-</html>
+        <?php include('./includes/footer.php') ?>
